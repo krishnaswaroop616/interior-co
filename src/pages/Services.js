@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useForm } from '@formspree/react';
 
 function Services() {
-    const [selectedService, setSelectedService] = useState(null);
     const [state, handleSubmit] = useForm("xqabneol");
 
     const services = [
@@ -39,29 +38,19 @@ function Services() {
     ];
 
     return (
-        <div className="bg-black/70 min-h-screen pt-24 pb-16 px-6 text-white">
+        <div className="bg-transparent/70 min-h-screen pt-24 pb-16 px-6 text-white">
             <h1 className="text-4xl font-bold text-center mb-12 mt-5">What We Provide</h1>
 
-            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto mb-20">
+            <div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto mb-20 ">
                 {services.map((service, idx) => (
-                    <div key={idx} onClick={() => setSelectedService(service)} className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-lg text-center cursor-pointer hover:shadow-2xl transition w-[300px]">
+                    <div key={idx}  className="bg-white/10 backdrop-blur-md p-2 flex flex-col mb-5 rounded-xl shadow-lg text-center  w-[350px] hover:scale-105 transition duration-200">
+                        <img src={service.img} className='h-48 mb-5 rounded-xl'></img>
                         <h3 className="text-xl font-semibold text-orange-400">{service.title}</h3>
+                        <p className='mb-2'>{service.desc}</p>
                     </div>
                 ))}
             </div>
 
-            {selectedService && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
-                    <div className="bg-white/70 text-black p-9 rounded-xl max-w-lg w-full relative shadow-2xl">
-                        <img src={selectedService.img} alt={selectedService.title} className="w-full h-64 object-cover rounded-lg mb-4 shadow-md transition duration-300"/>
-                        <h2 className="text-2xl font-bold mb-3">{selectedService.title}</h2>
-                        <p className="text-gray-700">{selectedService.desc}</p>
-                        <button onClick={() => setSelectedService(null)} className="absolute top-1 right-1  text-black font-bold text-xl px-2 py-1  ">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </button>
-                    </div>
-                </div>
-            )}
 
             {state.succeeded ? (
                 <div className="bg-orange-600 text-white text-center mx-auto w-64 p-6 rounded-xl shadow-xl mt-5">
