@@ -23,13 +23,13 @@ function Gallery() {
 
     return (
         <div className="pt-24 pb-16 px-6 bg-transparent/70 text-white min-h-screen">
-            <h1 className="text-4xl font-bold text-center mb-4 mt-8">Image gallery</h1>
-            <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">A showcase of our completed residential interior projects — including kitchens, bedrooms, living spaces, and more.</p>
+            <h1 className="text-5xl font-bold text-center mb-4 mt-8">Image gallery</h1>
+            <p className="text-center text-gray-300 mb-10 max-w-2xl mx-auto">A showcase of our completed residential interior projects — including kitchens, bedrooms, living spaces, and more.</p>
 
             <div className="mb-12 text-center">
-                <select value={category} onChange={(e) => handleCategory(e.target.value)} className="bg-white/90 text-black px-4 py-2 rounded text-lg focus:outline-none">
+                <select value={category} onChange={(e) => handleCategory(e.target.value)} className="bg-white/90 text-black px-4 py-2 rounded text-lg opacity-80">
                     {categories.map((item, idx) => (
-                        <option key={idx} value={item}>{item}</option>
+                        <option key={idx} value={item} >{item}</option>
                     ))}
                 </select>
             </div>
@@ -62,7 +62,7 @@ function Gallery() {
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
                     <div className="relative">
                         <img src={selectedImage} alt="Full View" className="max-w-[90vw] max-h-[90vh] rounded-lg " />
-                        <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 bg-white text-black px-3 py-2 rounded-full font-sm shadow">close</button>
+                        <button onClick={() => setIsOpen(false)} className="absolute top-1 right-1 text-2xl text-black px-3 py-2 "><i class="fa-solid fa-circle-xmark"></i></button>
                     </div>
                 </div>
             )}

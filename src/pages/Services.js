@@ -39,18 +39,17 @@ function Services() {
 
     return (
         <div className="bg-transparent/70 min-h-screen pt-24 pb-16 px-6 text-white">
-            <h1 className="text-4xl font-bold text-center mb-12 mt-5">What We Provide</h1>
+            <h1 className="text-5xl font-bold text-center mb-12 mt-5">What We Provide</h1>
 
-            <div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto mb-20 ">
+            <div className="flex flex-wrap justify-center gap-7 max-w-6xl mx-auto mb-20 ">
                 {services.map((service, idx) => (
                     <div key={idx}  className="bg-white/10 backdrop-blur-md p-2 flex flex-col mb-5 rounded-xl shadow-lg text-center  w-[350px] hover:scale-105 transition duration-200">
-                        <img src={service.img} className='h-48 mb-5 rounded-xl'></img>
+                        <img src={service.img} className='h-48 mb-5 rounded-xl opacity-80'></img>
                         <h3 className="text-xl font-semibold text-orange-400">{service.title}</h3>
                         <p className='mb-2'>{service.desc}</p>
                     </div>
                 ))}
             </div>
-
 
             {state.succeeded ? (
                 <div className="bg-orange-600 text-white text-center mx-auto w-64 p-6 rounded-xl shadow-xl mt-5">
