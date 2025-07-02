@@ -23,7 +23,7 @@ function Contact() {
         <div className="flex-1 space-y-8 text-gray-300">
           <div>
             <h3 className="text-xl font-semibold text-orange-400 mb-2 mt-6">Email</h3>
-            <p className="text-lg">contact@interiorco.com</p>
+            <p className="text-lg">contact@foyerbloom.com</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-orange-400 mb-2">Phone</h3>

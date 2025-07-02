@@ -20,10 +20,10 @@ function About() {
 
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-playfair-display font-bold mb-8 leading-tight">
-            About <span className="text-orange-400 font-semibold">InteriorCo</span>
+            About <span className="text-orange-400 font-semibold">Foyerbloom</span>
           </h1>
           <p className="text-lg text-gray-300 font-lato max-w-3xl mx-auto leading-relaxed">
-            At InteriorCo, we craft personalized living environments
+            At Foyerbloom, we craft personalized living environments
             that balance elegance, comfort, and functionality — turning everyday spaces into lasting impressions.
           </p>
         </div>
@@ -34,7 +34,7 @@ function About() {
           </h2>
           <div className="text-gray-300 font-lato text-lg leading-relaxed space-y-5">
             <p>
-              Founded in 2015, InteriorCo began with a vision to reimagine interior spaces — not just as beautiful rooms,
+              Founded in 2015, Foyerbloom began with a vision to reimagine interior spaces — not just as beautiful rooms,
               but as experiences that reflect individuality and purpose.
             </p>
             <p>
